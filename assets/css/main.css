@@ -3818,3 +3818,9 @@
 .spotlight:nth-child(2n) {
 	background-color: #FF4061;
 }
+
+.spotlight:nth-child(3n) {
+	background-color: #26B790;
+}
+
+#26B790
