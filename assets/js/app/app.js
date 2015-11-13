@@ -22,7 +22,12 @@
         url: feeds.blogs
       })
         .done(function (data) {
-          $('#main .inner').html(data);
+          var content = '';
+          data.forEach(function (val) {
+            content += '<h3>' + val.Title + '</h3>';
+            content += '<p>' + val.Body + '</h3>';
+          });
+          $('#main .inner').html(content);
         });
     }
   };
