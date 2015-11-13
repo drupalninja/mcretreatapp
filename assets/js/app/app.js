@@ -107,9 +107,13 @@
         data.forEach(function (val) {
 
           content += '<div class="item">';
+          content += '<div class="left">';
           content += '  <img src="' + val.Picture + '" width="300" />';
+          content += '</div>';
+          content += '<div class="right">';
           content += '  <h3>' + val.Name + '</h3>';
           content += '  <p>' + val.Testimonial + '</h3>';
+          content += '</div>';
           content += '</div>';
         });
         $('#main .inner').html(content);
@@ -157,9 +161,13 @@
           var title = teamTitles[val.Name];
 
           content += '<div class="item">';
+          content += '<div class="left">';
           content += '  <img src="' + val.Picture + '" />';
+          content += '</div>';
+          content += '<div class="right">';
           content += '  <h3>' + val.Name   + ' — ' + title + '</h3>';
           content += '  <p>' + val.Bio + '</h3>';
+          content += '</div>';
           content += '</div>';
         });
         $('#main .inner').html(content);
