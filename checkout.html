@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Checkout</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+				<!-- jQuery App includes -->
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/app/app.js"></script>
+    <script type="text/javascript">
+      var LHCChatOptions = {};
+      LHCChatOptions.opt = {widget_height:340,widget_width:300,popup_height:520,popup_width:500,domain:'viewcation.com'};
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        var referrer = (document.referrer) ? encodeURIComponent(document.referrer.substr(document.referrer.indexOf('://')+1)) : '';
+        var location  = (document.location) ? encodeURIComponent(window.location.href.substring(window.location.protocol.length)) : '';
+        po.src = '//viewcation.com/assets/modules/livehelperchat/lhc_web/index.php/chat/getstatus/(click)/internal/(position)/bottom_right/(ma)/br/(top)/350/(units)/pixels/(leaveamessage)/true/(department)/1?r='+referrer+'&l='+location;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">ViewCations</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<!-- Sidebar Menu -->
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="products.html">Products</a></li>
+											<li><a href="about.html">About Us</a></li>
+											<li><a href="blogs.html">Blogs</a></li>
+											<li><a href="podcasts.html">Podcasts</a></li>
+											<li><a href="team.html">Our Team</a></li>
+										</ul>
+									</div>
+									<!-- /Sidebar Menu -->
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Checkout</h2>
+							<p>Complete your subscription!</p>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+                <div class="container">
+                  <div class="row">
+                    <!-- You can make it whatever width you want. I'm making it full width
+                         on <= small devices and 4/12 page width on >= medium devices -->
+                    <div class="col-xs-12 col-md-4">
+
+
+                      <!-- CREDIT CARD FORM STARTS HERE -->
+                      <div class="panel panel-default credit-card-box">
+                        <div class="panel-heading display-table" >
+                          <div class="row display-tr" >
+                            <h3 class="panel-title display-td" >Payment Details</h3>
+                            <div class="display-td" >
+                              <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel-body">
+                          <form role="form" id="payment-form">
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="cardNumber">CARD NUMBER</label>
+                                  <div class="input-group">
+                                    <input
+                                      type="tel"
+                                      class="form-control"
+                                      name="cardNumber"
+                                      placeholder="Valid Card Number"
+                                      autocomplete="cc-number"
+                                      required autofocus
+                                      />
+                                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                  <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                  <input
+                                    type="tel"
+                                    class="form-control"
+                                    name="cardExpiry"
+                                    placeholder="MM / YY"
+                                    autocomplete="cc-exp"
+                                    required
+                                    />
+                                </div>
+                              </div>
+                              <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                  <label for="cardCVC">CV CODE</label>
+                                  <input
+                                    type="tel"
+                                    class="form-control"
+                                    name="cardCVC"
+                                    placeholder="CVC"
+                                    autocomplete="cc-csc"
+                                    required
+                                    />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="couponCode">COUPON CODE</label>
+                                  <input type="text" class="form-control" name="couponCode" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-12">
+                                <button class="btn btn-success btn-lg btn-block" type="submit">Start Subscription</button>
+                              </div>
+                            </div>
+                            <div class="row" style="display:none;">
+                              <div class="col-xs-12">
+                                <p class="payment-errors"></p>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <!-- CREDIT CARD FORM ENDS HERE -->
+
+
+                    </div>
+
+
+                  </div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
