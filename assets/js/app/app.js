@@ -103,8 +103,12 @@
         console.log(data);
         var content = '';
         data.forEach(function (val) {
-          content += '<h3>' + val.Name + '</h3>';
-          content += '<p>' + val.Testimonial + '</h3>';
+
+          content += '<div class="item">';
+          content += '  <img src="' + val.Picture + '" width="300" />';
+          content += '  <h3>' + val.Name + '</h3>';
+          content += '  <p>' + val.Testimonial + '</h3>';
+          content += '</div>';
         });
         $('#main .inner').html(content);
       });
@@ -123,9 +127,8 @@
           price = (parseFloat(price, 10) - 0.05).toFixed(2);
 
           content += '<div class="item">';
+          content += '  <img src="' + val.Picture + '" width="300" />';
           content += '  <h3>' + val.Title + ' — $' + price + '</h3>';
-
-          content += '<img src="' + val.Picture + '" width="300" />';
           content += '  <p>' + val.Description + ' <a class="add">Add To Cart</a>' + '</p>';
           content += '</div>';
         });
@@ -148,7 +151,7 @@
           var title = teamTitles[val.Name];
 
           content += '<div class="item">';
-          content += '<img src="' + val.Picture + '" />';
+          content += '  <img src="' + val.Picture + '" />';
           content += '  <h3>' + val.Name   + ' — ' + title + '</h3>';
           content += '  <p>' + val.Bio + '</h3>';
           content += '</div>';
