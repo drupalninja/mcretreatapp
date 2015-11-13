@@ -3839,11 +3839,12 @@ input {
 .col-xs-12 button {
 	margin-top: 20px;
 }
-
+.left {
+	float: left;
+	margin-right: 20px;
+}
 .item:before,
 .item:after,
-.item h3:before,
-.item h3:after,
 .item:before,
 .item:after {
 	display: table;
