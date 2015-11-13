@@ -119,22 +119,13 @@
         var content = '';
         data.forEach(function (val, i) {
           var price = val['MSRP Price'].replace(',', '');
-          var img = '';
 
           price = (parseFloat(price, 10) - 0.05).toFixed(2);
 
           content += '<div class="item">';
           content += '  <h3>' + val.Title + ' — $' + price + '</h3>';
 
-          $.ajax({
-            url: '/scripts/thumb/thumb.php?url=' + val.Picture + '?width=300&height=200"',
-            async: false
-          })
-            .done(function (data, status) {
-              img = data;
-            });
-
-          content += img;
+          content += '<img src="' + val.Picture + '" width="300" />';
           content += '  <p>' + val.Description + ' <a class="add">Add To Cart</a>' + '</p>';
           content += '</div>';
         });
