@@ -3839,3 +3839,24 @@ input {
 .col-xs-12 button {
 	margin-top: 20px;
 }
+
+.item:before,
+.item:after,
+.item h3:before,
+.item h3:after,
+.item:before,
+.item:after {
+	display: table;
+	content: " ";
+}
+.item img {
+	float: left;
+	margin-right: 20px;
+}
+
+.item p {}
+
+.item h3,
+.item:after {
+    clear: both;
+}
