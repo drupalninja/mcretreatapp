@@ -119,7 +119,7 @@
         var content = '';
         data.forEach(function (val, i) {
           var price = val['MSRP Price'].replace(',', '');
-          var img;
+          var img = '';
 
           price = (parseFloat(price, 10) - 0.05).toFixed(2);
 
@@ -130,7 +130,7 @@
             url: '/scripts/thumb/thumb.php?url=' + val.Picture + '?width=300&height=200"',
             async: false
           })
-            .done(function (data) {
+            .done(function (data, status) {
               img = data;
             });
 
@@ -155,8 +155,12 @@
         var content = '';
         teamData.forEach(function (val) {
           var title = teamTitles[val.Name];
-          content += '<h3>' + val.Name   + ' — ' + title + '</h3>';
-          content += '<p>' + val.Bio + '</h3>';
+
+          content += '<div class="item">';
+          content += '<img src="' + val.Picture + '" />';
+          content += '  <h3>' + val.Name   + ' — ' + title + '</h3>';
+          content += '  <p>' + val.Bio + '</h3>';
+          content += '</div>';
         });
         $('#main .inner').html(content);
       });
