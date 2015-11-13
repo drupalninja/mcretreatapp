@@ -88,8 +88,10 @@
         console.log(data);
         var content = '';
         data.forEach(function (val) {
-          content += '<h3>' + val.Title + '</h3>';
-          content += '<p>' + val.Body + '</h3>';
+          content += '<div class="item">';
+          content += '  <h3>' + val.Title + '</h3>';
+          content += '  <p>' + val.Body + '</h3>';
+          content += '</div>';
         });
         $('#main .inner').html(content);
       });
