@@ -23,6 +23,9 @@
     blogs: function () {
       updateContent(feeds.blogs)
     },
+    podcasts: function () {
+      updateContent(feeds.podcasts)
+    },
     team: function () {
       updateTeamContent(feeds.profiles)
     }
