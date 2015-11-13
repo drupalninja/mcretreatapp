@@ -129,9 +129,13 @@
           price = (parseFloat(price, 10) - 0.05).toFixed(2);
 
           content += '<div class="item">';
+          content += '<div class="left">';
           content += '  <img src="' + val.Picture + '" width="300" />';
+          content += '</div>';
+          content += '<div class="right">';
           content += '  <h3>' + val.Title + ' — $' + price + '</h3>';
           content += '  <p>' + val.Description + ' <a class="add">Add To Cart</a>' + '</p>';
+          content += '</div>';
           content += '</div>';
         });
         $('#main .inner').html(content);
