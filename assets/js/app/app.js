@@ -114,7 +114,7 @@
 
           content += '<div class="item">';
           content += '  <h3>' + val.Title + ' — $' + price + '</h3>';
-          content += '  <img src="/scripts/thumb/thumb.php?url=' + val.Picture + '?width=300&height=200" />';
+          content += '  <img src="/scripts/thumb/thumb.php?url=' + val.Picture + '&width=300&height=200" />';
           content += '  <p>' + val.Description + ' <a class="add">Add To Cart</a>' + '</p>';
           content += '</div>';
         });
