@@ -10,6 +10,4 @@ function cropImage($url, $startX, $startY, $width, $height) {
     return "data:image/jpeg;base64," . $base64;
 }
 
-?>
-<img src="<?php print cropImage($_GET['url'], 0, 0, $_GET['width'], $_GET['height']); ?>" width="<?php print $_GET['width']; ?>" height="<?php print $_GET['height']; ?>" />
-
+print cropImage($_GET['url'], 0, 0, $_GET['width'], $_GET['height']);
