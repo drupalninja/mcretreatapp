@@ -3823,4 +3823,19 @@
 	background-color: #26B790;
 }
 
-#26B790
+.add {
+	display: block;
+	margin: 20px 0;
+	font-weight: 800;
+	border: none;
+	text-decoration: none;
+	color: #ff0000;
+}
+
+input {
+	color: black;
+}
+
+.col-xs-12 button {
+	margin-top: 20px;
+}
