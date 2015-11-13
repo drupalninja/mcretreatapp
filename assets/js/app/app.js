@@ -107,10 +107,16 @@
       .done(function (data) {
         console.log(data);
         var content = '';
-        data.forEach(function (val) {
-          content += '<h3>' + val.Title + '</h3>';
-          content += '<img src="/scripts/thumb/thumb.php?url=' + val.Picture + '?width=300&height=200" />';
-          content += '<p>' + val.Description + '</h3>';
+        data.forEach(function (val, i) {
+          var price = val['MSRP Price'].replace(',', '');
+
+          price = (parseFloat(price, 10) - 0.05).toFixed(2);
+
+          content += '<div class="item">';
+          content += '  <h3>' + val.Title + ' — $' + price + '</h3>';
+          content += '  <img src="/scripts/thumb/thumb.php?url=' + val.Picture + '?width=300&height=200" />';
+          content += '  <p>' + val.Description + ' <a class="add">Add To Cart</a>' + '</p>';
+          content += '</div>';
         });
         $('#main .inner').html(content);
       });
