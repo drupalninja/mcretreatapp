@@ -13,8 +13,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!-- jQuery App includes -->
 		<script src="/assets/js/jquery.min.js"></script>
 		<script src="/assets/js/app/app.js"></script>
+    <script type="text/javascript">
+    var LHCChatOptions = {};
+    LHCChatOptions.opt = {widget_height:340,widget_width:300,popup_height:520,popup_width:500,domain:'viewcation.com'};
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      var referrer = (document.referrer) ? encodeURIComponent(document.referrer.substr(document.referrer.indexOf('://')+1)) : '';
+      var location  = (document.location) ? encodeURIComponent(window.location.href.substring(window.location.protocol.length)) : '';
+      po.src = '//viewcation.com/assets/modules/livehelperchat/lhc_web/index.php/chat/getstatus/(click)/internal/(position)/bottom_right/(ma)/br/(top)/350/(units)/pixels/(leaveamessage)/true/(department)/1?r='+referrer+'&l='+location;
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    </script>
 	</head>
 	<body class="landing">
 
@@ -35,7 +47,7 @@
 											<li><a href="about.html">About Us</a></li>
 											<li><a href="blogs.html">Blogs</a></li>
 											<li><a href="podcasts.html">Podcasts</a></li>
-											<li><a href="teams.html">Our Teams</a></li>
+											<li><a href="team.html">Our Team</a></li>
 										</ul>
 									</div>
 								</li>
