@@ -26,7 +26,8 @@
       updateContent(feeds.blogs)
     },
     podcasts: function () {
-      updateContent(feeds.podcasts)
+      updateContent(feeds.podcasts);
+    },
     products: function () {
       updateProductsContent(products[ourProduct]);
     },
