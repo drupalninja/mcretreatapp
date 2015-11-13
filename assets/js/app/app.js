@@ -8,6 +8,8 @@
     testimonials: 'https://api.myjson.com/bins/1ufqm'
   };
 
+  var ourProduct = 'vr';
+
   var products = {
     drones: 'https://api.myjson.com/bins/2x0mm',
     cats: 'https://api.myjson.com/bins/2z5se',
@@ -25,6 +27,8 @@
     },
     podcasts: function () {
       updateContent(feeds.podcasts)
+    products: function () {
+      updateProductsContent(products[ourProduct]);
     },
     team: function () {
       updateTeamContent(feeds.profiles)
@@ -62,6 +66,9 @@
       break;
   }
 
+  /**
+   * Content fetch/update functions.
+   */
   function updateContent(feedUrl) {
     $.ajax({
       url: feedUrl
@@ -87,6 +94,21 @@
         data.forEach(function (val) {
           content += '<h3>' + val.Name + '</h3>';
           content += '<p>' + val.Testimonial + '</h3>';
+        });
+        $('#main .inner').html(content);
+      });
+  }
+
+  function updateProductsContent(feedUrl) {
+    $.ajax({
+      url: feedUrl
+    })
+      .done(function (data) {
+        console.log(data);
+        var content = '';
+        data.forEach(function (val) {
+          content += '<h3>' + val.Title + '</h3>';
+          content += '<p>' + val.Description + '</h3>';
         });
         $('#main .inner').html(content);
       });
