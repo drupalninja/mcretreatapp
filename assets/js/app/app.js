@@ -17,6 +17,9 @@
 
   // content functions
   var content = {
+    about: function () {
+      updateTestimonialContent(feeds.testimonials);
+    },
     blogs: function () {
       updateContent(feeds.blogs)
     },
@@ -33,7 +36,7 @@
       break;
 
     case '/about.html':
-    content.about();
+      content.about();
       break;
 
     case '/blogs.html':
@@ -61,10 +64,26 @@
       url: feedUrl
     })
       .done(function (data) {
+        console.log(data);
         var content = '';
         data.forEach(function (val) {
           content += '<h3>' + val.Title + '</h3>';
           content += '<p>' + val.Body + '</h3>';
+        });
+        $('#main .inner').html(content);
+      });
+  }
+
+  function updateTestimonialContent(feedUrl) {
+    $.ajax({
+      url: feedUrl
+    })
+      .done(function (data) {
+        console.log(data);
+        var content = '';
+        data.forEach(function (val) {
+          content += '<h3>' + val.Name + '</h3>';
+          content += '<p>' + val.Testimonial + '</h3>';
         });
         $('#main .inner').html(content);
       });
