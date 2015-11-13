@@ -17,6 +17,16 @@
     vr: 'https://api.myjson.com/bins/3owka'
   };
 
+  var teamTitles = {
+    'Dante Taylor': 'CIO - Chief Imagination Officer',
+    'Jay Callicott': 'CEO - Chief Explorations Officer',
+    'Joel Thayakaran': 'CMO - Chief Meandering Officer',
+    'Ryan Gibson': 'CTO - Chief Travel Officer',
+    'Peter Mallett': 'COO - Chief Outings Officer',
+    'Kendra Sherer': 'CRO - Chief Roving Officer',
+    'Kelly Dassing': 'CFO - Chief Flight Officer'
+  };
+
   // content functions
   var content = {
     about: function () {
@@ -134,7 +144,8 @@
         console.log(teamData);
         var content = '';
         teamData.forEach(function (val) {
-          content += '<h3>' + val.Name   + '</h3>';
+          var title = teamTitles[val.Name];
+          content += '<h3>' + val.Name   + ' — ' + title + '</h3>';
           content += '<p>' + val.Bio + '</h3>';
         });
         $('#main .inner').html(content);

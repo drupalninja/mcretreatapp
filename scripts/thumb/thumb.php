@@ -9,5 +9,6 @@ function cropImage($url, $startX, $startY, $width, $height) {
     $base64 = base64_encode( $imagick->getImageBlob() );
     return "data:image/jpeg;base64," . $base64;
 }
-header("Content-type: image/jpeg");
-print cropImage($_GET['url'], 0, 0, $_GET['width'], $_GET['height']);
+
+?>
+<img src="<?php print cropImage($_GET['url'], 0, 0, $_GET['width'], $_GET['height']); ?>" width="<?php print $_GET['width']; ?>" height="<?php print $_GET['height']; ?>" />
