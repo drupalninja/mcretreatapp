@@ -109,6 +109,7 @@
         var content = '';
         data.forEach(function (val) {
           content += '<h3>' + val.Title + '</h3>';
+          content += '<img src="/scripts/thumb/thumb.php?url=' + val.Picture + '?width=300&height=200" />';
           content += '<p>' + val.Description + '</h3>';
         });
         $('#main .inner').html(content);
@@ -124,6 +125,7 @@
           return (element['Team #'] === 5);
         });
 
+        console.log(teamData);
         var content = '';
         teamData.forEach(function (val) {
           content += '<h3>' + val.Name   + '</h3>';
